@@ -1,28 +1,33 @@
-Description:
+# External AI Integration plus Economic Planner
 
-This apllication is divided in two section with two frameworks wich comunicates each others: 
-    An External AI Integration plus Economic Planner
+## Description
 
---------------****Economic Planner (Core Application)
+This application is divided in two sections with two frameworks which communicate with each other:  
+
+**Economic Planner (Core Application)**  
 This is a forward-looking financial planning app designed to help users manage and forecast their budget over a very flexible period of time. Unlike traditional budget apps that focus only on current balances and immediate expenses, this planner emphasizes planned vs actual transactions, allowing users to track predicted spending and income against real outcomes.
-Key features:
-	•	Planned Transactions: record intended expenses or income in advance.
-	•	Actual Transactions: confirm what was really spent or earned.
-	•	Is Completed Flag: tracks whether a planned transaction has been realized, ensuring accurate future forecasts.
-	•	Recurring transactions: daily, weekly, monthly, or yearly, for precise future planning.
 
+**Key features:**
+- Planned Transactions: record intended expenses or income in advance.
+- Actual Transactions: confirm what was really spent or earned.
+- Is Completed Flag: tracks whether a planned transaction has been realized, ensuring accurate future forecasts.
+- Recurring transactions: daily, weekly, monthly, or yearly, for precise future planning.
 
---------------****External AI Integration (FastAPI Module)
+---
+
+**External AI Integration (FastAPI Module)**  
 This project demonstrates how an external AI module can be integrated into an existing application without modifying its core logic, especially for frameworks that do not optimally support asynchronous operations required for AI, such as Flask. The AI component is hosted via FastAPI, providing asynchronous endpoints that can enhance the app with advanced features, such as data analysis or smart suggestions.
-Highlights:
-	•	Fully decoupled from the main Flask app, making it reusable for other projects.
-	•	Enables AI-powered features even in apps built with frameworks that lack robust async support.
-	•	Serves as a portfolio-ready example of extending existing software with AI services.
 
+**Highlights:**
+- Fully decoupled from the main Flask app, making it reusable for other projects.
+- Enables AI-powered features even in apps built with frameworks that lack robust async support.
+- Serves as a portfolio-ready example of extending existing software with AI services.
 
-Routing of the information and how the two frameworks talks each others:
+---
 
+## Routing of the information and how the two frameworks talk to each other
 
+```text
        ┌─────────────┐
        │  Frontend   │
        │ (User Input)│
@@ -50,14 +55,14 @@ Routing of the information and how the two frameworks talks each others:
    └─────┬────────────────┘
          │ prompt + processed data
          ▼
-   ┌───────────────┐
-   │     LLM       │
-   │  - generates  │
-   │    final      │
-   │   response    │
-   └─────┬─────────┘
-         │ final result
-         ▼
+       ┌───────────────┐
+       │     LLM       │
+       │  - generates  │
+       │    final      │
+       │   response    │
+       └─────┬─────────┘
+             │ final result
+             ▼
        ┌─────────────┐
        │  Frontend   │
        │ (Display)   │
