@@ -1,25 +1,16 @@
 # ==========================
 #  PYTHON / VIRTUAL ENV
 # ==========================
+venv311/
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.pdb
-*.pkl
 *.log
 *.tmp
-*.bak
-*.swp
 
-# Virtual environments
-venv/
-venv*/          # include venv311, venv310, etc.
-.env/
-.venv/
-ENV/
-env/
-env.bak/
+# ==========================
+#  ENVIRONMENT VARIABLES
+# ==========================
+.env
 
 # ==========================
 #  DATABASE FILES
@@ -27,72 +18,3 @@ env.bak/
 *.sqlite3
 *.db
 *.db-journal
-
-# Alembic / Migrations cache
-migrations/__pycache__/
-migrations/versions/__pycache__/
-
-# ==========================
-#  OS / IDE FILES
-# ==========================
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-*.code-workspace
-
-# ==========================
-#  ENVIRONMENT & CONFIG
-# ==========================
-.env
-*.env
-.env.local
-.env.*.local
-
-# ==========================
-#  BUILD / DIST / PACKAGING
-# ==========================
-build/
-dist/
-*.egg-info/
-*.egg
-.eggs/
-
-# ==========================
-#  LOGS / CACHE / TESTS
-# ==========================
-*.log
-logs/
-cache/
-__pycache__/
-.pytest_cache/
-.coverage
-coverage.xml
-htmlcov/
-test-results/
-tests/__pycache__/
-
-# ==========================
-#  OTHER FRAMEWORK FILES
-# ==========================
-# Flask instance folder
-instance/
-
-# FastAPI / Uvicorn temp files
-*.pid
-
-# ==========================
-#  SYSTEM FILES (macOS)
-# ==========================
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# ==========================
-#  BACKUPS & LOCAL STUFF
-# ==========================
-*.bak
-*.old
-*.orig
-*.tmp
-*.swp

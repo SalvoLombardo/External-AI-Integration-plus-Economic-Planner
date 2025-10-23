@@ -1,0 +1,40 @@
+{
+    "folder-color.pathColors": [
+        {
+            "folderPath": "Progetto_1/FASTAPI_APP/",
+            "color": "foldercolorizer.color_996633"
+        },
+        {
+            "folderPath": "Progetto_1/FLASK_APP/app/routes/",
+            "badge": "🛣️"
+        },
+        {
+            "folderPath": "Progetto_1/FLASK_APP/app/schemas/",
+            "badge": "📐"
+        },
+        {
+            "folderPath": "Progetto_1/FLASK_APP/app/service/",
+            "badge": "⚙️"
+        },
+        {
+            "folderPath": "Progetto_1/FLASK_APP/",
+            "color": "foldercolorizer.color_0066ff"
+        },
+        {
+            "folderPath": "Progetto_1/FASTAPI_APP/app/routes/",
+            "badge": "🛣️"
+        },
+        {
+            "folderPath": "Progetto_1/FASTAPI_APP/app/services/",
+            "badge": "⚙️"
+        },
+        {
+            "folderPath": "Progetto_1/FASTAPI_APP/app/pydantic_models/",
+            "badge": "📐"
+        },
+        {
+            "folderPath": "Progetto_1/FASTAPI_APP/app/utils/task_registry.py/",
+            "badge": "📖"
+        }
+    ]
+}
