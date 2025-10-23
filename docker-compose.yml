@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:15
+    container_name: finance_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: ${POSTGRES_DB:-finance_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 10s
+      retries: 5
+
+  flask_app:
+    build:
+      context: ./FLASK_APP
+      dockerfile: Dockerfile
+    container_name: flask_app
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5000:5000"
+    restart: always
+
+  fastapi_app:
+    build:
+      context: ./FASTAPI_APP
+      dockerfile: Dockerfile
+    container_name: fastapi_app
+    env_file:
+      - .env
+    depends_on:
+      flask_app:
+        condition: service_started
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    restart: always
+
+volumes:
+  db_data:
