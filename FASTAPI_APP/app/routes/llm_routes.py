@@ -18,9 +18,8 @@ async def ai_process(user_token_and_task: UserTokenTaskDataSchema):
     # the specific tast that AI have to do.
     #We have a disctionary of tasks (see from app.utils.task_registry import TASK_REGISTRY)
     #Every task is connected with a Flask endpoint.
-    #The process is FastApi->request to Flask -> tokenvalidation and flask function->again to FastApi to sand result to LLM and elaborate them
-
-
+    #The process is FastApi->request to Flask -> tokenvalidation and flask function->again 
+    # to FastApi to sand result to LLM and elaborate them
 
     #Check if front end pass the right task
     if user_token_and_task.task not in TASK_REGISTRY:
@@ -33,14 +32,11 @@ async def ai_process(user_token_and_task: UserTokenTaskDataSchema):
     FLASK_URL=single_task.get('endpoint')
     headers = {"Authorization": f"Bearer {user_token_and_task.user_jwt_token}"}
     
-    
     #Getting the data that will pass in the endpoint
     #IMPORTANT: see how it's described the UserTokenTaskDataSchema
     #           'data' is every type of data format
     payload= user_token_and_task.data
     
-
-
     #Connecting to the endpoint with httpx.AsyncClient because 'requests' doesn't support async.
     try:
         async with httpx.AsyncClient() as client:
