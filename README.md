@@ -75,3 +75,15 @@ Legend (summary)
 	•	token → JWT used for security validation
 	•	processed data → JSON processed and prepared for the LLM
 	•	LLM → Large Language Model that generates the final response based on the prompt and data
+
+
+
+
+
+
+How to start :
+1st terminal: - cd FASTAPI_APP 
+              - uvicorn run:app --reload
+
+2nd terminal: - cd FLASK_APP
+              - python3 run.py
