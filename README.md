@@ -89,6 +89,8 @@ Highlights:
        │ (Display)   │
        └─────────────┘
 
+       
+
 Legend (summary)
 	•	task → keyword + prompt for the LLM associated with an endpoint
 	•	token → JWT used for security validation
