@@ -71,10 +71,10 @@ This project demonstrates how an external AI module can be integrated into an ex
 
 
 Legend (summary)
-	•	task → keyword + prompt for the LLM associated with an endpoint
-	•	token → JWT used for security validation
-	•	processed data → JSON processed and prepared for the LLM
-	•	LLM → Large Language Model that generates the final response based on the prompt and data
+      •     task → keyword + prompt for the LLM associated with an endpoint
+      •     token → JWT used for security validation
+      •     processed data → JSON processed and prepared for the LLM
+      •     LLM → Large Language Model that generates the final response based on the prompt and data
 
 
 
@@ -87,6 +87,44 @@ How to start :
 
 2nd terminal: - cd FLASK_APP
               - python3 run.py
+
+
+⸻
+
+Screenshots and Workflow Example
+
+1. Login
+
+First, the user must log in to obtain the access token. This token will be used for authentication in all subsequent requests.
+
+⸻
+
+2. Create a Transaction
+
+Next, we simulate saving a transaction with an intentionally exaggerated cost to test how planned vs actual transactions are handled.
+
+⸻
+
+3. Submit Task (task.nj)
+
+Here, the frontend sends a request to our Flask endpoint, specifying the task as registered in the Task Registry and including the required data.
+
+⸻
+
+4. AI Reply
+
+Finally, the AI processes the submitted data and generates a detailed response. This output can be converted into HTML for visualization or reporting purposes.
+
+---
+
+Se vuoi, **il prossimo passo** potrebbe essere:
+
+- **Accorciare i testi sotto le immagini** per renderli più puliti nel README  
+- **Renderizzare l’AI reply in HTML** direttamente sotto l’immagine con `<pre>` o `<div>` per visualizzare il report con formattazione.  
+
+Vuoi che faccia direttamente anche la versione con HTML per l’AI reply?
+
+
 
 ![AI Reply](./media/AI_reply.png)
 ![Login Screen](./media/Login1.png)
