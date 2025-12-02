@@ -48,47 +48,6 @@ Highlights:
 
 ⸻
 
-```text
-       ┌─────────────┐
-       │  Frontend   │
-       │ (User Input)│
-       └─────┬───────┘
-             │ token + task
-             ▼
-   ┌──────────────────────┐
-   │  FastAPI (AI Gateway)│
-   │  - receives task     │
-   │  - async processing  │
-   └─────┬────────────────┘
-         │ HTTP async request (token + prompt)
-         ▼
-   ┌──────────────────────────┐
-   │  Flask App (Core Logic)  │
-   │  - endpoint validation   │
-   │  - generates JSON data   │
-   └─────┬────────────────────┘
-         │ JSON response
-         ▼
-   ┌──────────────────────┐
-   │  FastAPI             │
-   │  - process data      │
-   │  - prepare for LLM   │
-   └─────┬────────────────┘
-         │ prompt + processed data
-         ▼
-       ┌───────────────┐
-       │     LLM       │
-       │  - generates  │
-       │    final      │
-       │   response    │
-       └─────┬─────────┘
-             │ final result
-             ▼
-       ┌─────────────┐
-       │  Frontend   │
-       │ (Display)   │
-       └─────────────┘
-```text
 
 
 Legend (summary)
@@ -188,4 +147,45 @@ Feel free to fork, modify, or expand this repository.
 
 
 
-![AI Reply](media/AI_reply.png)
+```text
+       ┌─────────────┐
+       │  Frontend   │
+       │ (User Input)│
+       └─────┬───────┘
+             │ token + task
+             ▼
+   ┌──────────────────────┐
+   │  FastAPI (AI Gateway)│
+   │  - receives task     │
+   │  - async processing  │
+   └─────┬────────────────┘
+         │ HTTP async request (token + prompt)
+         ▼
+   ┌──────────────────────────┐
+   │  Flask App (Core Logic)  │
+   │  - endpoint validation   │
+   │  - generates JSON data   │
+   └─────┬────────────────────┘
+         │ JSON response
+         ▼
+   ┌──────────────────────┐
+   │  FastAPI             │
+   │  - process data      │
+   │  - prepare for LLM   │
+   └─────┬────────────────┘
+         │ prompt + processed data
+         ▼
+       ┌───────────────┐
+       │     LLM       │
+       │  - generates  │
+       │    final      │
+       │   response    │
+       └─────┬─────────┘
+             │ final result
+             ▼
+       ┌─────────────┐
+       │  Frontend   │
+       │ (Display)   │
+       └─────────────┘
+```text
+
