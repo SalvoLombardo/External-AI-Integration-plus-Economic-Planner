@@ -118,13 +118,11 @@ Finally, the AI processes the submitted data and generates a detailed response. 
 ---
 
 
-![AI Reply](https://github.com/SalvoLombardo/External-AI-Integration-plus-Economic-Planner/blob/c88aa74008cdd30b23e98eb3586e40bef2390fba/media/AI_reply.png)
 
-
-![Login Screen](./media/Login1.png)
+![Login Screen](/media/Login1.png)
 
 ![New Transaction](./media/New_transaction.png)
 
 
-![Task and Journal](./media/Task_and_J.png)
+![Task and Journal](./media/Admin_Invoice.gif)
 
