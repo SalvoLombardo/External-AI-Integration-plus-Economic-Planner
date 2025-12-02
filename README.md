@@ -176,3 +176,9 @@ Feel free to fork, modify, or expand this repository.
 
 ⸻
 
+
+
+![Login Screen](media/Login1.png)
+![New Transaction](media/New_transaction.png)
+![Task and Journal](media/Admin_Invoice.gif)
+![AI Reply](media/AI_reply.png)
