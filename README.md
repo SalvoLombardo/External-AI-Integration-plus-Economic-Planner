@@ -48,8 +48,7 @@ Highlights:
 
 ⸻
 
-- Routing of the information and framework interaction
-
+```text
        ┌─────────────┐
        │  Frontend   │
        │ (User Input)│
@@ -133,18 +132,18 @@ Or go to ./media folder for all media files.
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/ExternalAI.git
-cd ExternalAI
+            git clone https://github.com/your-username/ExternalAI.git
+            cd ExternalAI
 
 2. Start FastAPI (AI Gateway)
 
-cd FASTAPI_APP
-uvicorn run:app --reload
+            cd FASTAPI_APP
+            uvicorn run:app --reload
 
 3. Start Flask App (Core Logic)
 
-cd FLASK_APP
-python3 run.py
+            cd FLASK_APP
+            python3 run.py
 
 
 ⸻
@@ -152,12 +151,19 @@ python3 run.py
 - Workflow Example
 	1.	Login
 User logs in to obtain the access token for authentication in all subsequent requests.
+![Login Screen](media/Login1.png)
+
 	2.	Create a Transaction
-Save a planned transaction to test planned vs actual logic.
+Here we're creating an expensive transaction to test the LLM.
+![New Transaction](media/New_transaction.png)
+
 	3.	Submit Task
-Frontend sends request to Flask endpoint specifying the task from the Task Registry.
+Here we're simulating the Frontend sends request to Flask endpoint specifying the task from the Task Registry. The Frontend and backend has to refer to the same TASK REGISTRY.
+![Submit](media/Task_and_J.png)
+
 	4.	AI Reply
-FastAPI processes the submitted data, interacts with the LLM, and generates the final response.
+FastAPI processes the submitted data, interacts with the LLM, and generates the final response, it can be converted after in HTML.
+![AI Reply](media/AI_reply.png)
 
 ⸻
 
@@ -178,7 +184,6 @@ Feel free to fork, modify, or expand this repository.
 
 
 
-![Login Screen](media/Login1.png)
-![New Transaction](media/New_transaction.png)
-![Task and Journal](media/Admin_Invoice.gif)
+
+
 ![AI Reply](media/AI_reply.png)
