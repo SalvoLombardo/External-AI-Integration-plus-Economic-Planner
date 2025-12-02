@@ -117,12 +117,7 @@ Finally, the AI processes the submitted data and generates a detailed response. 
 
 ---
 
-
-
 ![Login Screen](media/Login1.png)
-
-![New Transaction](./media/New_transaction.png)
-
-
-![Task and Journal](./media/Admin_Invoice.gif)
-
+![New Transaction](media/New_transaction.png)
+![Task and Journal](media/Admin_Invoice.gif)
+![AI Reply](media/AI_reply.png)
