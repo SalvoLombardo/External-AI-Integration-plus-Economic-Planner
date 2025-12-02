@@ -88,8 +88,8 @@ Highlights:
        │  Frontend   │
        │ (Display)   │
        └─────────────┘
+```text
 
-       
 
 Legend (summary)
 	•	task → keyword + prompt for the LLM associated with an endpoint
