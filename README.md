@@ -1,8 +1,3 @@
-External AI Integration plus Economic Planner
-
-
-⸻
-
 
 <p align="center">
   <b>- External AI Integration plus Economic Planner -</b><br>
@@ -65,27 +60,6 @@ Legend (summary)
 	•	Asynchronous endpoints for AI processing
 	•	Decoupled architecture (Flask + FastAPI)
 	•	Portfolio-ready example of extending software with AI
-
-⸻
-
-- Media
-	1.	
-
-User login to obtain access token.
-
-	2.	
-
-Simulate saving a transaction with exaggerated cost.
-
-	3.	
-
-Frontend submits task to Flask endpoint.
-
-	4.	
-
-AI processes data and returns a detailed response.
-
-Or go to ./media folder for all media files.
 
 ⸻
 
@@ -187,5 +161,3 @@ Feel free to fork, modify, or expand this repository.
        │  Frontend   │
        │ (Display)   │
        └─────────────┘
-```text
-
