@@ -88,11 +88,7 @@ How to start :
 2nd terminal: - cd FLASK_APP
               - python3 run.py
 
-![AI Reply](media/AI_reply.png)
-![Login Screen](media/Login1.png)
-![New Transaction](media/New_transaction.png)
-![Task and Journal](media/Task_and_J.png)
-
-
-
-
+![AI Reply](./media/AI_reply.png)
+![Login Screen](./media/Login1.png)
+![New Transaction](./media/New_transaction.png)
+![Task and Journal](./media/Task_and_J.png)
