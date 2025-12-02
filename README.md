@@ -1,33 +1,55 @@
-# External AI Integration plus Economic Planner
+External AI Integration plus Economic Planner
 
-## Description
 
-This application is divided in two sections with two frameworks which communicate with each other:  
+⸻
 
-**Economic Planner (Core Application)**  
+
+<p align="center">
+  <b>- External AI Integration plus Economic Planner -</b><br>
+  Flask + FastAPI application demonstrating AI integration with an economic planning core.<br>
+</p>
+
+
+<p align="center">
+  <a href="#-overview"> Overview</a> •
+  <a href="#-features"> Features</a> •
+  <a href="#-media"> Media</a> •
+  <a href="#-setup"> Setup</a> •
+  <a href="#-workflow"> Workflow Example</a> •
+  <a href="#-license"> License</a>
+</p>
+
+
+
+⸻
+
+- Overview
+
+This application is divided in two sections with two frameworks which communicate with each other:
+
+Economic Planner (Core Application)
 This is a forward-looking financial planning app designed to help users manage and forecast their budget over a very flexible period of time. Unlike traditional budget apps that focus only on current balances and immediate expenses, this planner emphasizes planned vs actual transactions, allowing users to track predicted spending and income against real outcomes.
 
-**Key features:**
-- Planned Transactions: record intended expenses or income in advance.
-- Actual Transactions: confirm what was really spent or earned.
-- Is Completed Flag: tracks whether a planned transaction has been realized, ensuring accurate future forecasts.
-- Recurring transactions: daily, weekly, monthly, or yearly, for precise future planning.
+Key features:
+	•	Planned Transactions: record intended expenses or income in advance.
+	•	Actual Transactions: confirm what was really spent or earned.
+	•	Is Completed Flag: tracks whether a planned transaction has been realized, ensuring accurate future forecasts.
+	•	Recurring transactions: daily, weekly, monthly, or yearly, for precise future planning.
 
----
+⸻
 
-**External AI Integration (FastAPI Module)**  
+External AI Integration (FastAPI Module)
 This project demonstrates how an external AI module can be integrated into an existing application without modifying its core logic, especially for frameworks that do not optimally support asynchronous operations required for AI, such as Flask. The AI component is hosted via FastAPI, providing asynchronous endpoints that can enhance the app with advanced features, such as data analysis or smart suggestions.
 
-**Highlights:**
-- Fully decoupled from the main Flask app, making it reusable for other projects.
-- Enables AI-powered features even in apps built with frameworks that lack robust async support.
-- Serves as a portfolio-ready example of extending existing software with AI services.
+Highlights:
+	•	Fully decoupled from the main Flask app, making it reusable for other projects.
+	•	Enables AI-powered features even in apps built with frameworks that lack robust async support.
+	•	Serves as a portfolio-ready example of extending existing software with AI services.
 
----
+⸻
 
-## Routing of the information and how the two frameworks talk to each other
+- Routing of the information and framework interaction
 
-```text
        ┌─────────────┐
        │  Frontend   │
        │ (User Input)│
@@ -68,56 +90,89 @@ This project demonstrates how an external AI module can be integrated into an ex
        │ (Display)   │
        └─────────────┘
 
-
-
 Legend (summary)
-      •     task → keyword + prompt for the LLM associated with an endpoint
-      •     token → JWT used for security validation
-      •     processed data → JSON processed and prepared for the LLM
-      •     LLM → Large Language Model that generates the final response based on the prompt and data
+	•	task → keyword + prompt for the LLM associated with an endpoint
+	•	token → JWT used for security validation
+	•	processed data → JSON processed and prepared for the LLM
+	•	LLM → Large Language Model that generates the final response based on the prompt and data
 
+⸻
 
+- Features
+	•	Forward-looking financial planning (planned vs actual transactions)
+	•	Recurring transactions: daily, weekly, monthly, yearly
+	•	External AI integration using FastAPI
+	•	Asynchronous endpoints for AI processing
+	•	Decoupled architecture (Flask + FastAPI)
+	•	Portfolio-ready example of extending software with AI
 
+⸻
 
+- Media
+	1.	
 
+User login to obtain access token.
 
-How to start :
-1st terminal: - cd FASTAPI_APP 
-              - uvicorn run:app --reload
+	2.	
 
-2nd terminal: - cd FLASK_APP
-              - python3 run.py
+Simulate saving a transaction with exaggerated cost.
+
+	3.	
+
+Frontend submits task to Flask endpoint.
+
+	4.	
+
+AI processes data and returns a detailed response.
+
+Or go to ./media folder for all media files.
+
+⸻
+
+- Setup
+
+1. Clone the Repository
+
+git clone https://github.com/your-username/ExternalAI.git
+cd ExternalAI
+
+2. Start FastAPI (AI Gateway)
+
+cd FASTAPI_APP
+uvicorn run:app --reload
+
+3. Start Flask App (Core Logic)
+
+cd FLASK_APP
+python3 run.py
 
 
 ⸻
 
-Screenshots and Workflow Example
-
-1. Login
-
-First, the user must log in to obtain the access token. This token will be used for authentication in all subsequent requests.
-
-⸻
-
-2. Create a Transaction
-
-Next, we simulate saving a transaction with an intentionally exaggerated cost to test how planned vs actual transactions are handled.
+- Workflow Example
+	1.	Login
+User logs in to obtain the access token for authentication in all subsequent requests.
+	2.	Create a Transaction
+Save a planned transaction to test planned vs actual logic.
+	3.	Submit Task
+Frontend sends request to Flask endpoint specifying the task from the Task Registry.
+	4.	AI Reply
+FastAPI processes the submitted data, interacts with the LLM, and generates the final response.
 
 ⸻
 
-3. Submit Task (task.nj)
+- License
 
-Here, the frontend sends a request to our Flask endpoint, specifying the task as registered in the Task Registry and including the required data.
+This project is open source and intended for learning and portfolio purposes.
+Feel free to fork, modify, or expand this repository.
 
 ⸻
 
-4. AI Reply
+      • Author: Salvatore Lombardo
+	•	Guitarist • Software Developer • Music Teacher • Artistic Director
+	•	Based in Sicily, Italy
+	•	Email: salvolombardoj@gmail.com
+	•	Portfolio: https://github.com/SalvoLombardo
 
-Finally, the AI processes the submitted data and generates a detailed response. This output can be converted into HTML for visualization or reporting purposes.
+⸻
 
----
-
-![Login Screen](media/Login1.png)
-![New Transaction](media/New_transaction.png)
-![Task and Journal](media/Admin_Invoice.gif)
-![AI Reply](media/AI_reply.png)
