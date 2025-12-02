@@ -117,14 +117,6 @@ Finally, the AI processes the submitted data and generates a detailed response. 
 
 ---
 
-Se vuoi, **il prossimo passo** potrebbe essere:
-
-- **Accorciare i testi sotto le immagini** per renderli più puliti nel README  
-- **Renderizzare l’AI reply in HTML** direttamente sotto l’immagine con `<pre>` o `<div>` per visualizzare il report con formattazione.  
-
-Vuoi che faccia direttamente anche la versione con HTML per l’AI reply?
-
-
 
 ![AI Reply](./media/AI_reply.png)
 ![Login Screen](./media/Login1.png)
