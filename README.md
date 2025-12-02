@@ -100,6 +100,10 @@ Here we're simulating the Frontend sends request to Flask endpoint specifying th
 FastAPI processes the submitted data, interacts with the LLM, and generates the final response, it can be converted after in HTML.
 ![AI Reply](media/AI_reply.png)
 
+	5.	Better representation
+FastAPI processes the submitted data, interacts with the LLM, and generates the final response, it can be converted after in HTML.
+![AI Reply](media/Formatted.jpg)
+
 ⸻
 
 - License
