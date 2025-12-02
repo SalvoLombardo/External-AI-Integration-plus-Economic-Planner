@@ -119,7 +119,7 @@ Finally, the AI processes the submitted data and generates a detailed response. 
 
 
 
-![Login Screen](/media/Login1.png)
+![Login Screen](media/Login1.png)
 
 ![New Transaction](./media/New_transaction.png)
 
